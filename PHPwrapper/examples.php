@@ -33,6 +33,9 @@ $contactEmail	= (array)$api->getContactsByEmail('EMAIL_ID');
 $contactEmailID	= array_keys($contactEmail);
 $deleteResponse	= $api->deleteContact($contactEmailID[0]); 
 
+// Find the Account details. you can get all verified account emailIDs. It will be useful while sending the newsletters. 
+$accountDetails = $api->getAccountFromFields();
+
 
 var_dump($contacts, $setName, $setCustoms, $customs, $contact, $geoIP, $opens, $clicks);
 
